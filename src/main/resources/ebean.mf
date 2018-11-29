@@ -1,0 +1,3 @@
+entity-packages: com.cv.utilizable.taskmanager.beans
+transactional-packages: com.cv.utilizable
+querybean-packages: com.cv.utilizable

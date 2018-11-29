@@ -1,0 +1,32 @@
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="chapters.configuration">
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+    <root level="debug">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+    <!-- Testing with Docker containers -->
+    <logger name="io.ebean.docker" level="TRACE"/>
+
+    <logger name="io.ebean.DDL" level="TRACE"/>
+
+    <logger name="io.ebean.SQL" level="TRACE"/>
+    <logger name="io.ebean.TXN" level="TRACE"/>
+    <logger name="io.ebean.SUM" level="TRACE"/>
+
+    <!-- L2 cache logging -->
+    <logger name="io.ebean.cache.QUERY" level="TRACE"/>
+    <logger name="io.ebean.cache.BEAN" level="TRACE"/>
+    <logger name="io.ebean.cache.COLL" level="TRACE"/>
+    <logger name="io.ebean.cache.NATKEY" level="TRACE"/>
+
+</configuration>
