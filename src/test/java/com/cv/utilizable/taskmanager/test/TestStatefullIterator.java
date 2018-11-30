@@ -5,14 +5,19 @@ import com.cv.utilizable.taskmanager.TaskContext;
 import com.cv.utilizable.taskmanager.beans.DBIterator;
 import com.cv.utilizable.taskmanager.beans.DBListImpl;
 import com.cv.utilizable.taskmanager.beans.EBeanSetup;
+import org.junit.Before;
 import org.junit.Test;
 
 public class TestStatefullIterator {
 
+    @Before
+    public void setup(){
+        EBeanSetup.initialize();
+    }
+
     @Test
     public void testCreateAndDeleteIterator(){
 
-        EBeanSetup.initialize();
         TaskContext taskContext = new TaskContext();
         PersistentIterator iterator = taskContext.getIterator("iter01");
 
@@ -56,6 +61,23 @@ public class TestStatefullIterator {
         PersistentIterator iterator1 = secondContext.getIterator("iter03");
 
         System.out.println("Retain status "+iterator1.get("3"));
+    }
 
+    @Test
+    public void testDBIteratorMethods(){
+
+        EBeanSetup.initialize();
+        TaskContext firstContext = new TaskContext();
+        PersistentIterator iterator = firstContext.getIterator("iter03");
+
+        System.out.println("List of completed element "+iterator.getAllCompletedElements().size());
+        iterator.getAllCompletedElements().forEach(elem -> {
+            System.out.println(elem);
+        });
+
+        System.out.println("List of InCompleted element "+iterator.getAllIncompletedElements().size());
+        iterator.getAllIncompletedElements().forEach(elem -> {
+            System.out.println(elem);
+        });
     }
 }

@@ -5,6 +5,8 @@ import com.cv.utilizable.taskmanager.beans.EBeanSetup;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.time.Instant;
+
 public class TestDBIterator {
 
     @Test
@@ -12,11 +14,12 @@ public class TestDBIterator {
 
         EBeanSetup.initialize();
         DBIterator dbIterator = new DBIterator();
-        dbIterator.setName("Test1");
+        String dynamicDBName = String.valueOf(Instant.now().getEpochSecond());
+        dbIterator.setName(dynamicDBName);
         dbIterator.save();
 
-        String name = DBIterator.find.ref(1L).getName();
-        Assert.assertEquals("name are not equals", name, "Test1");
+        String name = DBIterator.find.byId(dbIterator.getId()).getName();
+        Assert.assertEquals("name are not equals", name, dynamicDBName);
 
     }
 }
