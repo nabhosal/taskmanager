@@ -10,7 +10,7 @@ public class EBeanSetup {
     }
 
     public static EbeanServer initialize(){
-        ServerConfig serverConfig = EBeanServerConfig.getDefault("t4");
+        ServerConfig serverConfig = EBeanServerConfig.getDefault("t6");
         serverConfig.setName("db");
 
         // set as default and register so that Model can be

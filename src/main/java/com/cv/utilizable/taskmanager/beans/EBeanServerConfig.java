@@ -2,6 +2,7 @@ package com.cv.utilizable.taskmanager.beans;
 
 import io.ebean.config.ServerConfig;
 
+import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Properties;
 
@@ -38,6 +39,9 @@ public class EBeanServerConfig {
         String dbPath = Paths.get(tempDirectoryPath, runId).toAbsolutePath().toString();
         System.out.println("Default temp directory path: " + dbPath);
         properties.put("datasource.db.databaseUrl", "jdbc:h2:file:"+dbPath);
+        if(Files.exists(Paths.get(dbPath+".mv.db")))
+            properties.put("ebean.db.ddl.run", "false");
+
         cfg.loadFromProperties(properties);
         System.out.println("url "+cfg.getDataSourceConfig().getUrl());
         return cfg;

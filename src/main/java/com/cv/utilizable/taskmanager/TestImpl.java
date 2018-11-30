@@ -22,7 +22,7 @@ public class TestImpl {
         DBIterator itr = DBIterator.find.byId(1l);
         System.out.println(itr);
         System.out.println(itr.getDblists().size());
-        System.out.println(itr.getElement("1").toString());
+//        System.out.println(itr.getElement("1").toString());
 
         System.out.println(DBListImpl.find.all());
 

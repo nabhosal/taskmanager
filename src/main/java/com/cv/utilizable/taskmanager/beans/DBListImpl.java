@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name="iter_list")
 public class DBListImpl extends BaseDomain {
 
-    @Column(name = "code", nullable=false)
+    @Column(name = "code", nullable=false, unique=true)
     private String code;
 
     private boolean status = false;

@@ -15,6 +15,7 @@ create table iter_list (
   version                       bigint not null,
   created_on                    timestamp not null,
   modified_on                   timestamp not null,
+  constraint uq_iter_list_code unique (code),
   constraint pk_iter_list primary key (id)
 );
 

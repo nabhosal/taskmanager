@@ -38,7 +38,12 @@ public class DBIterator extends BaseDomain {
     }
 
     public void add(String code){
-        DBListImpl.create(code, this).save();
+        try{
+            DBListImpl.create(code, this).save();
+        }catch (io.ebean.DuplicateKeyException e){
+            System.out.println("Exception catch \n"+e);
+        }
+
     }
 
     public DBListImpl getElement(String code){
