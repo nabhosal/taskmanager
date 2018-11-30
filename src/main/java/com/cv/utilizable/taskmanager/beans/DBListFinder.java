@@ -29,4 +29,11 @@ public class DBListFinder extends Finder<Long, DBListImpl> {
     public DBListFinder() {
         super(DBListImpl.class);
     }
+
+    public DBListImpl byCode(String code) {
+
+        return  db().find(DBListImpl.class)
+                .where().eq("code", code)
+                .findOne();
+    }
 }

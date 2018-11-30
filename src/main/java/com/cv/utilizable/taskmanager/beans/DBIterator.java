@@ -10,7 +10,7 @@ import java.util.List;
 @Table(name="iterator")
 public class DBIterator extends BaseDomain {
 
-    @Column(name = "iter_name")
+    @Column(unique=true)
     private String name;
 
     @OneToMany(cascade = CascadeType.ALL)
@@ -48,7 +48,7 @@ public class DBIterator extends BaseDomain {
 
     public DBListImpl getElement(String code){
 
-        return DBListImpl.find.query().where().eq("code", code).select("code, status").findOne();
+        return DBListImpl.find.query().where().eq("code", code).findOne();
     }
 
     @Override

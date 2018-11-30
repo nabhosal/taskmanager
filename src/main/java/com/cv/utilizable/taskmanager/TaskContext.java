@@ -13,6 +13,8 @@ public class TaskContext {
 
     public PersistentIterator getIterator(String name){
 
-        return iteratorMap.putIfAbsent(name, null); // Todo replace null with default impl
+        if(!iteratorMap.containsKey(name))
+            iteratorMap.put(name, PersistentIteratorImpl.loadFromDB(name));
+        return iteratorMap.get(name);
     }
 }

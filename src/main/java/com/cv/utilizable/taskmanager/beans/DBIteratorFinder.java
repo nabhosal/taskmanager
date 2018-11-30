@@ -29,4 +29,11 @@ public class DBIteratorFinder extends Finder<Long, DBIterator> {
     public DBIteratorFinder() {
         super(DBIterator.class);
     }
+
+    public DBIterator byName(String name) {
+
+        return  db().find(DBIterator.class)
+                .where().eq("name", name)
+                .findOne();
+    }
 }

@@ -1,9 +1,10 @@
 create table iterator (
   id                            bigint auto_increment not null,
-  iter_name                     varchar(255),
+  name                          varchar(255),
   version                       bigint not null,
   created_on                    timestamp not null,
   modified_on                   timestamp not null,
+  constraint uq_iterator_name unique (name),
   constraint pk_iterator primary key (id)
 );
 

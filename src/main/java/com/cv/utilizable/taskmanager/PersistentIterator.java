@@ -1,17 +1,25 @@
 package com.cv.utilizable.taskmanager;
 
+import com.cv.utilizable.taskmanager.beans.DBListImpl;
+
+import java.util.List;
+
 public interface PersistentIterator extends Iterable{
 
-    void add(String id);
-    void add(String id, boolean completed);
+    void add(String code);
+    DBListImpl get(String code);
+    DBListImpl get(String code, Object def);
 
-    void completed(String id);
-    boolean get(String id);
+    void completed(String code);
+    Boolean getStatus(String code);
 
-    boolean remove(String id);
+    boolean remove(String code);
 
     boolean clearAll();
 
-    PersistentIterator getAllIncompleteIds();
+    List<DBListImpl> getAllIncompletedElements();
 
+    List<DBListImpl> getAllCompletedElements();
+
+    PersistentIterator loadFromDBInternal(String iteratorName);
 }
