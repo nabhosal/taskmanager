@@ -1,8 +1,7 @@
-package com.cv.utilizable.taskmanager;
+package com.cv.utilizable.taskmanager.dbiterator;
 
-import com.cv.utilizable.taskmanager.PersistentIterator;
-import com.cv.utilizable.taskmanager.beans.DBIterator;
-import com.cv.utilizable.taskmanager.beans.DBListImpl;
+import com.cv.utilizable.taskmanager.dbiterator.beans.DBIterator;
+import com.cv.utilizable.taskmanager.dbiterator.beans.DBListImpl;
 
 import java.util.Iterator;
 import java.util.List;

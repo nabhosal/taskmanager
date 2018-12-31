@@ -1,4 +1,4 @@
-package com.cv.utilizable.taskmanager.beans;
+package com.cv.utilizable.taskmanager.dbiterator.beans;
 
 import io.ebean.EbeanServer;
 import io.ebean.EbeanServerFactory;
@@ -10,7 +10,7 @@ public class EBeanSetup {
     }
 
     public static EbeanServer initialize(){
-        ServerConfig serverConfig = EBeanServerConfig.getDefault("t7");
+        ServerConfig serverConfig = EBeanServerConfig.getDefault("t8hive ");
         serverConfig.setName("db");
 
         // set as default and register so that Model can be

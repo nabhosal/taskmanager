@@ -1,4 +1,4 @@
-package com.cv.utilizable.taskmanager.test;
+package com.cv.utilizable.taskmanager.dbiterator.test;
 
 import org.junit.Test;
 

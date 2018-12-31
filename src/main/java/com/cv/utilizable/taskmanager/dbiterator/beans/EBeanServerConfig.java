@@ -1,4 +1,4 @@
-package com.cv.utilizable.taskmanager.beans;
+package com.cv.utilizable.taskmanager.dbiterator.beans;
 
 import io.ebean.config.ServerConfig;
 

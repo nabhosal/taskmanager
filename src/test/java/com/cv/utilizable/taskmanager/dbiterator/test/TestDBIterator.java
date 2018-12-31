@@ -1,7 +1,7 @@
-package com.cv.utilizable.taskmanager.test;
+package com.cv.utilizable.taskmanager.dbiterator.test;
 
-import com.cv.utilizable.taskmanager.beans.DBIterator;
-import com.cv.utilizable.taskmanager.beans.EBeanSetup;
+import com.cv.utilizable.taskmanager.dbiterator.beans.DBIterator;
+import com.cv.utilizable.taskmanager.dbiterator.beans.EBeanSetup;
 import org.junit.Assert;
 import org.junit.Test;
 

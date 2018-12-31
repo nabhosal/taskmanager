@@ -1,11 +1,9 @@
-package com.cv.utilizable.taskmanager;
+package com.cv.utilizable.taskmanager.dbiterator;
 
-import com.cv.utilizable.taskmanager.beans.DBIterator;
-import com.cv.utilizable.taskmanager.beans.DBListImpl;
-import com.cv.utilizable.taskmanager.beans.EBeanSetup;
+import com.cv.utilizable.taskmanager.dbiterator.beans.DBIterator;
+import com.cv.utilizable.taskmanager.dbiterator.beans.DBListImpl;
+import com.cv.utilizable.taskmanager.dbiterator.beans.EBeanSetup;
 import io.ebean.EbeanServer;
-
-import java.util.List;
 
 public class TestImpl {
 

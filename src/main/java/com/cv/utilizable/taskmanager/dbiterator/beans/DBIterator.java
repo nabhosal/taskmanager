@@ -1,8 +1,7 @@
-package com.cv.utilizable.taskmanager.beans;
+package com.cv.utilizable.taskmanager.dbiterator.beans;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 

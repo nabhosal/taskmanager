@@ -1,8 +1,8 @@
-package com.cv.utilizable.taskmanager.beans;
+package com.cv.utilizable.taskmanager.dbiterator.beans;
 
 import io.ebean.Finder;
 
-public class DBListFinder extends Finder<Long, DBListImpl> {
+public class DBIteratorFinder extends Finder<Long, DBIterator> {
     /**
      * Create with the type of the entity bean.
      * <pre>{@code
@@ -26,14 +26,14 @@ public class DBListFinder extends Finder<Long, DBListImpl> {
      *
      * @param type
      */
-    public DBListFinder() {
-        super(DBListImpl.class);
+    public DBIteratorFinder() {
+        super(DBIterator.class);
     }
 
-    public DBListImpl byCode(String code) {
+    public DBIterator byName(String name) {
 
-        return  db().find(DBListImpl.class)
-                .where().eq("code", code)
+        return  db().find(DBIterator.class)
+                .where().eq("name", name)
                 .findOne();
     }
 }

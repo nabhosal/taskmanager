@@ -1,10 +1,9 @@
-package com.cv.utilizable.taskmanager.test;
+package com.cv.utilizable.taskmanager.dbiterator.test;
 
-import com.cv.utilizable.taskmanager.PersistentIterator;
+import com.cv.utilizable.taskmanager.dbiterator.PersistentIterator;
 import com.cv.utilizable.taskmanager.TaskContext;
-import com.cv.utilizable.taskmanager.beans.DBIterator;
-import com.cv.utilizable.taskmanager.beans.DBListImpl;
-import com.cv.utilizable.taskmanager.beans.EBeanSetup;
+import com.cv.utilizable.taskmanager.dbiterator.beans.DBIterator;
+import com.cv.utilizable.taskmanager.dbiterator.beans.EBeanSetup;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,6 +1,6 @@
-package com.cv.utilizable.taskmanager;
+package com.cv.utilizable.taskmanager.dbiterator;
 
-import com.cv.utilizable.taskmanager.beans.DBListImpl;
+import com.cv.utilizable.taskmanager.dbiterator.beans.DBListImpl;
 
 import java.util.List;
 
